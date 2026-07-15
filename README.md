@@ -7,8 +7,7 @@ Rather than building a complex, fully deployed web app that requires hosting and
 ---
 
 ## 🔗 Live Visual Prototype
-[** 
-](https://medimap-neuro.my.canva.site/)
+* **[Click here to explore the interactive MediMap Neuro Canva Site](https://medimap-neuro.my.canva.site/)**
 ---
 
 ## 🧠 Why I Built This (The Medical Logic)
