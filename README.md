@@ -1,29 +1,35 @@
-# MediMap Neuro | Clinical AI Triage Engine
+# MediMap Neuro | Headache Triage Prototype
 
-A responsive, web-based clinical scoring application and triage engine designed to assist in neurological risk stratification and clinical red-flag recognition for headache presentations[cite: 1].
+This project is a high-fidelity concept and layout I designed to show how a clinical decision-making tool for headaches could look and work in real life. 
 
----
-
-## 🎯 Project Overview & Clinical Scaffolding
-In emergency and primary care settings, rapid and accurate triage of neurological symptoms is critical. MediMap Neuro was developed to bridge clinical decision guidelines with responsive software interface design[cite: 1]. 
-
-* **Evidence-Based Logic:** Designed symptom-assessment workflows focused on identifying critical secondary headache etiologies (such as Subarachnoid Hemorrhage, meningitis, and hypertensive crises)[cite: 1].
-* **Red-Flag Alert System:** Implemented triage screening parameters highlighting critical warning signs (e.g., thunderclap onset, focal neurological deficits, and meningismus)[cite: 1].
-* **Clinician Documentation Handoffs:** Built an automated summary output generator to format patient assessments into clean, structured clinical notes ready for attending physicians[cite: 1].
+Rather than building a complex, fully deployed web app that requires hosting and API keys, I designed the entire visual interface as a **Canva Site**. You can click through the interactive UI layout, while the actual medical logic and Python code are stored right here in this GitHub repository.
 
 ---
 
-## 🛠️ Development & Architecture
-* **Clinical Design & Scaffolding:** Acted as the Clinical Architect, mapping out diagnostic workflows, safety boundaries, and assessment scoring rules based on established medical protocols[cite: 1].
-* **AI-Assisted Prototyping:** Leveraged generative AI models (Claude/Gemini) as virtual "junior developers" to rapidly generate the React, Tailwind CSS frontend, and Python scripting[cite: 1].
-* **Backend Framework:** Built with Python using lightweight application routing to run the evaluation algorithms[cite: 1].
+## 🔗 Live Visual Prototype
+* **[Click here to open my interactive Canva Site design]** 
 
 ---
 
-## 📂 Repository File Structure
-* `app.py`: The core Python application backend containing the scoring algorithms and server routing.
-* `requirements.txt`: Python package dependencies required to host and run the application.
-* `gemini-code-...`: Prompts and raw logic generated during the collaborative AI-assisted design phase[cite: 1].
+## 🧠 Why I Built This (The Medical Logic)
+As a medical student, I wanted to see how we could make patient triage in emergency rooms or clinics both faster and safer. This design focuses on primary vs. secondary headaches using the established **SNOOP10 framework**
+
+* **Spotting Red Flags:** The layout guides a clinician through checking for critical warning signs (like a sudden "thunderclap" headache, fever, or neurological changes).
+* **Clean Doctor Handoffs:** Once the clinician clicks through the triage questions, the tool automatically drafts a clean, structured summary note ready to copy and paste into the patient’s medical chart.
+
+---
+
+## 🛠️ How It's Put Together
+* **The Design (Canva):** I used Canva to build the high-fidelity user interface so recruiters and physicians can easily see how the tool is meant to be navigated in a clinical setting.
+* **The Brains (Python):** In `app.py`, you'll find the actual backend logic. It contains the scoring algorithms and rules that evaluate the patient's answers.
+* **The Build Process (AI-Assisted):** I acted as the clinical architect, designing the diagnostic flows and safety guardrails. I then used AI (Gemini/Claude) as a programming assistant to help me write the Python script and organize the setup.
+
+---
+
+## 📂 What's in this Repository?
+* `app.py`: The Python file containing the actual triage logic and scoring algorithms.
+* `requirements.txt`: The standard dependencies file.
+* `gemini-code-...txt`: A record of the prompts and logic brainstormed during the AI-assisted design phaase.
 
 ---
 
