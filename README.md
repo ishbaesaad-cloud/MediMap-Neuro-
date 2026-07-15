@@ -1,32 +1,74 @@
-# MediMap Neuro | Headache Triage Prototype
+# MediMap Neuro — Clinical Decision Support Logic for Headache Triage
 
-This project is a high-fidelity concept and layout I designed to show how a clinical decision-making tool for headaches could look and work in real life. 
+**A rules-based triage scoring engine built on the SNOOP10 clinical framework, translating a headache triage protocol into a testable classification algorithm with sample-case validation.**
 
-Rather than building a complex, fully deployed web app that requires hosting and API keys, I designed the entire visual interface as a **Canva Site**. You can click through the interactive UI layout, while the actual medical logic and Python code are stored right here in this GitHub repository.
-
----
-
-## 🔗 Live Visual Prototype
-* **[Click here to explore the interactive MediMap Neuro Canva Site](https://medimap-neuro.my.canva.site/)**
----
-
-## 🧠 Why I Built This (The Medical Logic)
-As a medical student, I wanted to see how we could make patient triage in emergency rooms or clinics both faster and safer. This design focuses on primary vs. secondary headaches using the established **SNOOP10 framework**
-
-* **Spotting Red Flags:** The layout guides a clinician through checking for critical warning signs (like a sudden "thunderclap" headache, fever, or neurological changes).
-* **Clean Doctor Handoffs:** Once the clinician clicks through the triage questions, the tool automatically drafts a clean, structured summary note ready to copy and paste into the patient’s medical chart.
+[▶ Interactive UI Prototype (Canva)](https://medimap-neuro.my.canva.site/)
 
 ---
 
-## 🛠️ How It's Put Together
-* **The Design (Canva):** I used Canva to build the high-fidelity user interface so recruiters and physicians can easily see how the tool is meant to be navigated in a clinical setting.
-* **The Brains (Python):** In `app.py`, you'll find the actual backend logic. It contains the scoring algorithms and rules that evaluate the patient's answers.
-* **The Build Process (AI-Assisted):** I acted as the clinical architect, designing the diagnostic flows and safety guardrails. I then used AI (Gemini/Claude) as a programming assistant to help me write the Python script and organize the setup.
+## Problem
 
----
+Emergency rooms and outpatient clinics need a fast, consistent way to separate low-risk ("primary") headaches from potentially dangerous ("secondary") ones. Manual triage is inconsistent and depends heavily on individual clinician experience — a gap where structured decision logic can reduce variability and catch red flags earlier.
 
-## 📂 What's in this Repository?
-* `app.py`: The Python file containing the actual triage logic and scoring algorithms.
+## Approach
+
+I designed the triage logic around the **SNOOP10 framework** (established red-flag criteria for secondary headache used in clinical guidelines) and translated it into a rules-based scoring algorithm in Python:
+
+- **Input:** patient-reported symptoms and history, mapped to the 10 SNOOP10 categories (Systemic symptoms, Neurologic signs, Onset, Older age, Pattern change, Positional, Precipitated, Papilledema, Progressive, Pregnancy)
+- **Logic:** `app.py` scores each flag by clinical severity and classifies the case into a **Red / Yellow / Green urgency tier**
+- **Output:** a structured, chart-ready summary note generated automatically for each case
+
+## Sample Output
+
+Running `app.py` on 5 sample cases produces:
+
+```
+Total cases: 5
+RED: 3
+YELLOW: 1
+GREEN: 1
+```
+
+Example single-case output:
+
+```
+--- MediMap Neuro Triage Summary ---
+Case ID: CASE-001
+Age: 34
+SNOOP10 Score: 8
+Urgency Tier: RED
+Flags identified:
+  - Onset - thunderclap (sudden, severe, peak <1 min)
+  - Neurologic signs/symptoms (focal deficit, confusion, seizure)
+Guidance: Recommend urgent evaluation / imaging per institutional protocol.
+-------------------------------------
+```
+
+## Tech Stack
+
+- **Python** (standard library only — no external dependencies)
+- **Canva** — high-fidelity UI prototype for clinical usability review
+- AI-assisted development (Claude/Gemini used as a coding assistant for implementation; clinical logic, diagnostic flow, and safety guardrails designed by me)
+
+## Repository Contents
+
+| File | Description |
+|---|---|
+| `app.py` | SNOOP10 scoring engine, tier classification logic, and 5 sample patient cases |
+| `requirements.txt` | Dependency file (none required — Python 3.8+ stdlib) |
+
+## How to Run
+
+```bash
+python app.py
+```
+
+This runs the scoring engine against the 5 built-in sample cases and prints a triage summary note plus a tier breakdown for each.
+
+## Disclaimer
+
+This is a portfolio prototype demonstrating clinical-logic-to-code translation. It is not a validated diagnostic device and is not intended for real clinical decision-making without further validation and regulatory review.
+
 
 
 ---
