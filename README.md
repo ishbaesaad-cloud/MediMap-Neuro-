@@ -7,8 +7,8 @@ Rather than building a complex, fully deployed web app that requires hosting and
 ---
 
 ## 🔗 Live Visual Prototype
-* **[Click here to open my interactive Canva Site design]** 
-
+[** 
+](https://medimap-neuro.my.canva.site/)
 ---
 
 ## 🧠 Why I Built This (The Medical Logic)
@@ -29,12 +29,7 @@ As a medical student, I wanted to see how we could make patient triage in emerge
 ## 📂 What's in this Repository?
 * `app.py`: The Python file containing the actual triage logic and scoring algorithms.
 * `requirements.txt`: The standard dependencies file.
-* `gemini-code-...txt`: A record of the prompts and logic brainstormed during the AI-assisted design phaase.
+* `gemini-code-...txt`: A record of the prompts and logic brainstormed during the AI-assisted design phase.
 
 ---
 
-## 🚀 How to Run the App Locally
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies:
-   ```bash
-   pip install -r requirements.txt
