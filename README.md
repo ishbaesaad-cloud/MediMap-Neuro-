@@ -27,8 +27,7 @@ As a medical student, I wanted to see how we could make patient triage in emerge
 
 ## 📂 What's in this Repository?
 * `app.py`: The Python file containing the actual triage logic and scoring algorithms.
-* `requirements.txt`: The standard dependencies file.
-* `gemini-code-...txt`: A record of the prompts and logic brainstormed during the AI-assisted design phase.
+
 
 ---
 
